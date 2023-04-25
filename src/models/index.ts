@@ -1,2 +1,2 @@
-export * from './jobs.model';
-export * from './erro.model';
+export * from "./jobs.model";
+export * from "./erro.model";

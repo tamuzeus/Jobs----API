@@ -1,17 +1,17 @@
-import { JobsRepository } from "../repository";
+import { JobsRepository } from "../repositories";
+import { cannotGetAllJobs } from "../errors";
 import { Job } from "../models";
-import { cannotGetAllJobs } from '../errors';
 
 async function getAllJobs(): Promise<Job[]> {
-    const jobsList = JobsRepository.getAllJobs();
+  const jobsList = JobsRepository.getAllJobs();
 
-    if (!jobsList) {
-        throw cannotGetAllJobs;
-    };
+  if (!jobsList) {
+    throw cannotGetAllJobs;
+  }
 
-    return jobsList;
-};
+  return jobsList;
+}
 
 export const JobsService = {
-    getAllJobs
+  getAllJobs,
 };
