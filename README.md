@@ -17,9 +17,21 @@ API tem como função realização do GET da lista completa de vagas disponívei
 4. Jest - Bom frameworks de testes. Fácil de usar, oferece recursos avançados de testes como mocks, spy e snapshot testing.
 5. Prisma ORM - Interação com bancos de dados SQL simples e segura, oferecendo um conjunto de APIs poderosas para consultas e migrações de dados.
 
-## Como carregar o dump de desenvolvimento (opcional):
 
-1. No diretório aonde está o `dump`, abra o terminal.
+## Como iniciar o desenvolvimento:
+
+1. Clone este repositório.
+2. Instale todas as dependências.
+
+```bash
+npm i
+```
+
+3. Crie e configure o arquivo `.env` usando o `.env.example`.
+
+## Como carregar o dump de desenvolvimento:
+
+1. No diretório aonde está o `dump` da database `Job`, abra o terminal.
 2. Digite o seguinte comando:
    
 ```bash
@@ -46,27 +58,17 @@ npx prisma db pull
 npx prisma generate
 ```
 
-## Como executar em desenvolvimento:
+## Executar em desenvolvimento:
 
-1. Clone este repositório.
-2. Instale todas as dependências.
-
-```bash
-npm i
-```
-
-3. Configure o arquivo `.env` usando o `.env.example`.
-
-4. Execute o back-end em um ambiente de desenvolvimento:
+1. Execute o back-end em um ambiente de desenvolvimento:
 
 ```bash
 npm run start
 ```
 
-
 ## Informações do banco:
 
-1. Database name utilizada foi `Job`, está pode ser definida e alterada no `.env`
+1. Database name utilizada foi `Job`, definida no `.env`
 2. Possui 1 tabela.
 
 `tabela:`
