@@ -1,4 +1,4 @@
-# Menu-API
+# Jobs-API
 
 API Jobs, teste para Desenvolvedor FullStack.
 API tem como função realização do GET da lista completa de vagas disponíveis!
@@ -19,11 +19,31 @@ API tem como função realização do GET da lista completa de vagas disponívei
 
 ## Como carregar o dump de desenvolvimento (opcional):
 
-1. No diretório aonde está o dump (), abra o terminal.
+1. No diretório aonde está o `dump`, abra o terminal.
 2. Digite o seguinte comando:
    
 ```bash
------
+pg_restore -U seu_username -d Job C:\local_até_o_dump\dump.sql
+```
+
+## Executar o prisma:
+
+1. Rode comando de inicizalição do Prisma ORM.
+
+```bash
+npx prisma init
+```
+
+2. Ler as tabelas do seu banco (definidas em sua .env) e trazer ao Prisma.
+
+```bash
+npx prisma db pull
+```
+
+3. Gerar um conjunto de classes e funções TypeScript que representam os modelos do banco de dados definidos em um arquivo schema.prisma.
+
+```bash
+npx prisma generate
 ```
 
 ## Como executar em desenvolvimento:
@@ -37,99 +57,49 @@ npm i
 
 3. Configure o arquivo `.env` usando o `.env.example`.
 
-4. Se houver nescessidade de criação da `dist`, utilize: `npx tsc`
-
-5. Inicie o servidor `---`, por exemplo: `----`
-
-6. Execute o back-end em um ambiente de desenvolvimento:
+4. Execute o back-end em um ambiente de desenvolvimento:
 
 ```bash
-npm run watch, npm run redist ou npm run dev (caso tenha a pasta dist)
+npm run start
 ```
 
-## Como carregar o dump de teste (opcional):
-
-1. No diretório aonde está o dump (), abra o terminal.
-2. Digite o seguinte comando:
-   
-```bash
------
-```
-
-## Como executar testes:
-
-1. Configure o arquivo `.env.test` usando o `.env.example`.
-
-2. Execute os testes em um ambiente de desenvolvimento:
-
-```bash
-npm run test
-```
 
 ## Informações do banco:
 
-1. Database name utilizada foi `#`, está pode ser definida e alterada no `.env`
-2. É 1 tabela
+1. Database name utilizada foi `Job`, está pode ser definida e alterada no `.env`
+2. Possui 1 tabela.
 
 `tabela:`
 
-
+- jobs
 
 ## Formato dos envios/retornos:
 
 
-`GET /product`
+`GET /`
 
 1. Retorno
 
 ```
-  {
-    "_id": "642fc0da7e293a2cce660615",
-    "categories": [
-      [
-        {
-          "_id": "comidas",
-          "parent": null,
-          "name": "Comidas"
-        }
-      ]
-    ],
-    "name": "Vinho Seco",
-    "qty": 30,
-    "price": 20.4,
-    "__v": 0
+  [{
+    "id": 1,
+    "title": "Desenvolvedor Web",
+    "description": "Desenvolvimento de aplicações web utilizando React e Node.js",
+    "companyName": "Empresa A",
+    "cityName": "São Paulo",
+    "stateName": "São Paulo - SP",
+    "updatedAt": "2023-04-25T08:42:45.033Z",
+    "createdAt": "2023-04-25T08:42:45.033Z"
   },
   {
-    "_id": "64307f885b2e3e38560351da",
-    "categories": [
-      [
-        {
-          "_id": "comidas",
-          "parent": null,
-          "name": "Comidas"
-        }
-      ]
-    ],
-    "name": "Vinho Tinto",
-    "qty": 40,
-    "price": 40.4,
-    "__v": 0
-  },
-  {
-    "_id": "64308040d0ce999029ae3774",
-    "categories": [
-      [
-        {
-          "_id": "comidas",
-          "parent": null,
-          "name": "Comidas"
-        }
-      ]
-    ],
-    "name": "Pizza",
-    "qty": 16,
-    "price": 10,
-    "__v": 0
-  }
+    "id": 2,
+    "title": "Analista de Sistemas",
+    "description": "Análise e desenvolvimento de sistemas para a área financeira",
+    "companyName": "Empresa B",
+    "cityName": "Rio de Janeiro",
+    "stateName": "Rio de Janeiro - RJ",
+    "updatedAt": "2023-04-25T08:42:45.033Z",
+    "createdAt": "2023-04-25T08:42:45.033Z"
+  }]
 ```
 
