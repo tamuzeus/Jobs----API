@@ -29,14 +29,25 @@ npm i
 
 3. Crie e configure o arquivo `.env` usando o `.env.example`.
 
-## Como carregar o dump de desenvolvimento:
+## Como carregar o dump de desenvolvimento (terminal):
 
-1. No diretório aonde está o `dump` da database `Job`, abra o terminal.
+1. No diretório aonde está o `dump` da database `Job`, abra o terminal
 2. Digite o seguinte comando:
    
 ```bash
-pg_restore -U seu_username -d Job C:\local_até_o_dump\dump.sql
+pg_restore -U seu_username -d Job C:\local_até_o_dump\dump
 ```
+
+## Como carregar o dump de desenvolvimento (Dbeaver):
+
+1. Abra o Dbeaver
+2. Configure uma conexão PostgreSQL
+3. Clique com botão direito do mouse em Database > Create New Database.
+4. Em `Database name`, digite `Job` e depois clique em `OK`
+5. Em `Job`, clique com botão direito do mouse > Tools > Restore
+6. Em `Backup File` clique no icone da pasta e vá até diretório aonde está o `dump` da database `Job`, selecione o mesmo (dump.backup) e confirme!
+7. Faça as confirmações finais e após a confirmação do restore, apenas fecha o modal e utilize o banco (Contém 97 jobs inseridos para teste) ! 
+   
 
 ## Executar o prisma:
 
