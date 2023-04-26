@@ -6,10 +6,9 @@
   "type": "commonjs",
   "scripts": {
     "test": "jest --runInBand",
-    "start": "node dist/app.js",
     "build": "tsc --outDir ./dist",
     "redist": "npx ts-node src/server.ts",
-    "watch": "nodemon src/server.ts"
+    "start": "nodemon src/server.ts"
   },
   "author": "",
   "license": "ISC",
