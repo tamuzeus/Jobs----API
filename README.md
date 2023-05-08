@@ -14,8 +14,7 @@ API tem como função realização do GET da lista completa de vagas disponívei
 1. Typescript - Para tipagem estática, interfaces e classes. Em outras palavras, para maior segurança e previsibilidade.
 2. Node - Um ótimo ambiente de tempo de execução para criar aplicativos do lado do servidor escaláveis e eficientes com JS.
 3. PostgreSQL - Um sistema de gerenciamento de banco de dados relacional, oferece segurança para armazenamento e manipulação de dados.
-4. Jest - Bom frameworks de testes. Fácil de usar, oferece recursos avançados de testes como mocks, spy e snapshot testing.
-5. Prisma ORM - Interação com bancos de dados SQL simples e segura, oferecendo um conjunto de APIs poderosas para consultas e migrações de dados.
+4. Prisma ORM - Interação com bancos de dados SQL simples e segura, oferecendo um conjunto de APIs poderosas para consultas e migrações de dados.
 
 
 ## Como iniciar o desenvolvimento:
